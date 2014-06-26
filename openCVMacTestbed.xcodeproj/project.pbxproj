@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		BB54FA84195CC0F700BB8161 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB54FA83195CC0F700BB8161 /* main.cpp */; };
 		BB54FA86195CC0F700BB8161 /* openCVMacTestbed.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = BB54FA85195CC0F700BB8161 /* openCVMacTestbed.1 */; };
-		BB54FA8E195CC23D00BB8161 /* libopencv_core.2.4.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BB54FA8D195CC23D00BB8161 /* libopencv_core.2.4.9.dylib */; };
-		BB54FA90195CC25000BB8161 /* libopencv_highgui.2.4.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BB54FA8F195CC25000BB8161 /* libopencv_highgui.2.4.9.dylib */; };
+		BB5CF56E195CC76C00247201 /* libopencv_highgui.2.4.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BB5CF56D195CC76C00247201 /* libopencv_highgui.2.4.9.dylib */; };
+		BB5CF572195CC87900247201 /* libopencv_core.2.4.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BB5CF571195CC87900247201 /* libopencv_core.2.4.9.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,8 +30,8 @@
 		BB54FA80195CC0F700BB8161 /* openCVMacTestbed */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = openCVMacTestbed; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB54FA83195CC0F700BB8161 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		BB54FA85195CC0F700BB8161 /* openCVMacTestbed.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = openCVMacTestbed.1; sourceTree = "<group>"; };
-		BB54FA8D195CC23D00BB8161 /* libopencv_core.2.4.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_core.2.4.9.dylib; path = ../../../../usr/local/lib/libopencv_core.2.4.9.dylib; sourceTree = "<group>"; };
-		BB54FA8F195CC25000BB8161 /* libopencv_highgui.2.4.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_highgui.2.4.9.dylib; path = ../../../../usr/local/lib/libopencv_highgui.2.4.9.dylib; sourceTree = "<group>"; };
+		BB5CF56D195CC76C00247201 /* libopencv_highgui.2.4.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_highgui.2.4.9.dylib; path = ../../../usr/local/lib/libopencv_highgui.2.4.9.dylib; sourceTree = "<group>"; };
+		BB5CF571195CC87900247201 /* libopencv_core.2.4.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_core.2.4.9.dylib; path = ../../../usr/local/lib/libopencv_core.2.4.9.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,8 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB54FA90195CC25000BB8161 /* libopencv_highgui.2.4.9.dylib in Frameworks */,
-				BB54FA8E195CC23D00BB8161 /* libopencv_core.2.4.9.dylib in Frameworks */,
+				BB5CF56E195CC76C00247201 /* libopencv_highgui.2.4.9.dylib in Frameworks */,
+				BB5CF572195CC87900247201 /* libopencv_core.2.4.9.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,7 +50,7 @@
 		BB54FA77195CC0F700BB8161 = {
 			isa = PBXGroup;
 			children = (
-				BB54FA8C195CC17100BB8161 /* OpenCV Frameworks */,
+				BB5CF56C195CC75A00247201 /* OpenCV Framework */,
 				BB54FA82195CC0F700BB8161 /* openCVMacTestbed */,
 				BB54FA81195CC0F700BB8161 /* Products */,
 			);
@@ -73,13 +73,13 @@
 			path = openCVMacTestbed;
 			sourceTree = "<group>";
 		};
-		BB54FA8C195CC17100BB8161 /* OpenCV Frameworks */ = {
+		BB5CF56C195CC75A00247201 /* OpenCV Framework */ = {
 			isa = PBXGroup;
 			children = (
-				BB54FA8F195CC25000BB8161 /* libopencv_highgui.2.4.9.dylib */,
-				BB54FA8D195CC23D00BB8161 /* libopencv_core.2.4.9.dylib */,
+				BB5CF571195CC87900247201 /* libopencv_core.2.4.9.dylib */,
+				BB5CF56D195CC76C00247201 /* libopencv_highgui.2.4.9.dylib */,
 			);
-			name = "OpenCV Frameworks";
+			name = "OpenCV Framework";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +219,7 @@
 					"/usr/local/include/**",
 				);
 				LIBRARY_SEARCH_PATHS = "/usr/local/lib/**";
+				PRELINK_LIBS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -232,6 +233,7 @@
 					"/usr/local/include/**",
 				);
 				LIBRARY_SEARCH_PATHS = "/usr/local/lib/**";
+				PRELINK_LIBS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -255,6 +257,7 @@
 				BB54FA8B195CC0F700BB8161 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
